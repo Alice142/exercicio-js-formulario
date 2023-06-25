@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Exercício 03</title>
+</head>
+<body>
+    <div class="texto">
+        <h1 class="titulo">
+            FICOU COM DÚVIDA?
+            <br>
+            NOS MANDE UMA MENSAGEM!
+        </h1>
+        <br>
+        <P class="conteudo">
+            Caso tenha ficado com qualquer dúvida basta nos mandar mensagem e estraremos em contato em menos de 24h.
+        </P>
+    </div>
+    <div class="content">
+        <form id="form">
+            <div>
+                <input type="text" placeholder="Nome completo *" class="inputs required" oninput="nameValidate()">
+                <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
+            </div>
+            <div>
+                <input type="email" placeholder="Email*" class="inputs required" oninput="emailValidate()">
+                <span class="span-required">Digite um email válido</span>
+            </div>
+
+            <div>
+                <input   type="text" placeholder="Telefone*" class="inputs required phone_with_ddd" oninput="telefoneValidate()">
+                <span class="span-required">Telefone invalido</span>
+            </div>
+
+            <div>
+                <input type="checkbox" id="whatsapp" value="whatsapp" name="whatsapp">
+                <label for="whatsapp">Whatsapp</label>
+            </div>
+
+            <di>
+                <textarea class="inputs required" name="descricao" id="descricao" cols="25" rows="10" placeholder="Mensagem *" oninput="mensagemValidate()"></textarea>
+                <span class="span-required">Campo obrigatório</span>
+            </di>
+            <p>*Campos obrigatorios</p>
+           
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+<script type="text/javascript" src="src/js/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+<script>
+    $('.phone_with_ddd').mask('(00) 0 0000-0000');
+</script>
+</html>
